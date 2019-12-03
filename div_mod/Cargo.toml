@@ -1,0 +1,7 @@
+[package]
+name = "div_mod"
+version = "0.1.0"
+authors = ["Pavlo Hrytsenko <pavlo.hrytsenko@volvocars.com>"]
+edition = "2018"
+
+[dependencies]
