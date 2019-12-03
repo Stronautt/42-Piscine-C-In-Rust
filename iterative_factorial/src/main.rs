@@ -1,6 +1,6 @@
 fn iterative_factorial(mut n: u8) -> Result<u128, String> {
     if n == 0 {
-        return Ok(0);
+        return Ok(1);
     }
     let mut result: u128 = 1;
     while n > 0 {
@@ -10,6 +10,19 @@ fn iterative_factorial(mut n: u8) -> Result<u128, String> {
         n -= 1;
     }
     Ok(result)
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_iterative_factorial() {
+        assert_eq!(crate::iterative_factorial(0), Ok(1));
+        assert_eq!(crate::iterative_factorial(1), Ok(1));
+        assert_eq!(crate::iterative_factorial(2), Ok(2));
+        assert_eq!(crate::iterative_factorial(3), Ok(6));
+        assert_eq!(crate::iterative_factorial(4), Ok(24));
+        assert_eq!(crate::iterative_factorial(5), Ok(120));
+    }
 }
 
 fn main() {

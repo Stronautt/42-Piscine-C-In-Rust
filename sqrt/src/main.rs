@@ -7,6 +7,16 @@ fn safe_sqrt(n: f64) -> Result<f64, String> {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_safe_sqrt() {
+        assert_eq!(crate::safe_sqrt(4.0), Ok(2.0));
+        assert_eq!(crate::safe_sqrt(0.0), Ok(0.0));
+        assert!(crate::safe_sqrt(-4.0).is_err());
+    }
+}
+
 fn main() {
     match std::env::args()
         .nth(1)

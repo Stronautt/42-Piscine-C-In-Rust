@@ -5,3 +5,4 @@ authors = ["Pavlo Hrytsenko <pavlo.hrytsenko@volvocars.com>"]
 edition = "2018"
 
 [dependencies]
+tempfile = "*"
